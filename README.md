@@ -1,4 +1,4 @@
-![image]((http://pool.bitcoinn.biz/bitcoin-nova.png))
+![image](http://pool.bitcoinn.biz/bitcoin-nova.png)
 
 #### Master Build Status
 [![Build Status](https://travis-ci.org/bitcoinnova/bitcoinnova.svg?branch=master)](https://travis-ci.org/bitcoinnova/bitcoinnova) [![Build status](https://ci.appveyor.com/api/projects/status/github/bitcoinnova/bitcoinnova?branch=master&svg=true)](https://ci.appveyor.com/project/RocksteadyTC/bitcoinnova)
