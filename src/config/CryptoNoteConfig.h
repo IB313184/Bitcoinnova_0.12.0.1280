@@ -241,7 +241,7 @@ const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 const char* const SEED_NODES[] = {
   "85.214.158.156:45222",    // Nodo-1 pool.bitcoinnova.org
   "37.59.108.203:45222",     // Node-2 37.59.108.203
-  "83.32.93.23:45222",       // Node-3 superblockchain.con-ip.com
+  "superblockchain.con-ip.com:45222",       // Node-3 superblockchain.con-ip.com
   "211.200.73.100:45222",    // Node-4 (211.200.73.100)
   "149.202.44.54:45222",     // Node-5 (149.202.44.54)
   "81.169.166.154:45222"     // Node-6 (81.169.166.154)
