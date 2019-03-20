@@ -22,6 +22,12 @@ RUN add-apt-repository ppa:jonathonf/gcc-7.1 && \
     apt-get update && \
     apt-get install gcc-7 g++-7 -y
 
+# build cmake (ubuntu 14.04 comes with cmake 2.8, we want a 3.X)
+RUN apt-get install -y curl
+RUN curl -O https://cmake.org/files/v3.8/cmake-3.8.0.tar.gz \
+     && tar -xvf cmake-3.8.0.tar.gz
+RUN cd cmake-3.8.0 && ./bootstrap && make && make install
+
 RUN apt-get update && \
     apt-get install -y \
       build-essential \
@@ -58,12 +64,6 @@ RUN apt-get update && \
       libboost-serialization1.58.0 \
       libboost-program-options1.58.0 \
       libicu55
-
-# build cmake (ubuntu 14.04 comes with cmake 2.8, we want a 3.X)
-RUN apt-get install -y curl
-RUN curl -O https://cmake.org/files/v3.8/cmake-3.8.0.tar.gz \
-     && tar -xvf cmake-3.8.0.tar.gz
-RUN cd cmake-3.8.0 && ./bootstrap && make && make install
 
 # setup the bitcoinnovad service
 RUN useradd -r -s /usr/sbin/nologin -m -d /var/lib/bitcoinnovad bitcoinnovad && \
