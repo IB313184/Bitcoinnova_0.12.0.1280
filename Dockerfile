@@ -22,8 +22,8 @@ RUN apt-get update && \
     apt-get install -y \
       build-essential \
       python-dev \
-      gcc-7.0 \
-      g++-7.0 \
+      gcc-7 \
+      g++-7 \
       git cmake \
       libboost1.58-all-dev && \
     git clone https://github.com/IB313184/Bitcoinnova_0.12.0.1280.git /src/bitcoinnova && \
