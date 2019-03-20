@@ -40,7 +40,7 @@ deploy:
     draft: false
     prerelease: false
     on:
-      appveyor_repo_name: IB313184/Bitcoinnova_0.12.0.1280
+      appveyor_repo_name: BitcoinNova/bitcoinnova
       appveyor_repo_tag: true
 
   - provider: S3
