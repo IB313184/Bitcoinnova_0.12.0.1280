@@ -11,8 +11,8 @@ RUN tar xzf /tmp/s6-overlay-amd64.tar.gz -C /
 ADD https://github.com/just-containers/socklog-overlay/releases/download/v2.1.0-0/socklog-overlay-amd64.tar.gz /tmp/
 RUN tar xzf /tmp/socklog-overlay-amd64.tar.gz -C /
 
-ARG TURTLECOIN_BRANCH=master
-ENV TURTLECOIN_BRANCH=${TURTLECOIN_BRANCH}
+ARG BITCOINNOVA_BRANCH=master
+ENV BITCOINNOVA_BRANCH=${BITCOINNOVA_BRANCH}
 
 # install build dependencies
 # checkout the latest tag
@@ -25,7 +25,7 @@ RUN apt-get update && \
       g++-4.9 \
       git cmake \
       libboost1.58-all-dev && \
-    git clone https://github.com/BitcoinNova/bitcoinnova.git /src/bitcoinnova && \
+    git clone https://github.com/IB313184/Bitcoinnova_0.12.0.1280.git /src/bitcoinnova && \
     cd /src/bitcoinnova && \
     git checkout $BITCOINNOVA_BRANCH && \
     mkdir build && \
