@@ -18,13 +18,15 @@ ENV BITCOINNOVA_BRANCH=${BITCOINNOVA_BRANCH}
 # checkout the latest tag
 # build and install
 
+RUN add-apt-repository ppa:jonathonf/gcc-7.1 && \
+    apt-get update && \
+    apt-get install gcc-7 g++-7 -y
+
 RUN apt-get update && \
     apt-get install -y \
       build-essential \
       python-dev \
-      gcc-7 \
-      g++-7 \
-      git cmake \
+      git \
       libboost1.58-all-dev && \
     git clone https://github.com/IB313184/Bitcoinnova_0.12.0.1280.git /src/bitcoinnova && \
     cd /src/bitcoinnova && \
@@ -44,7 +46,7 @@ RUN apt-get update && \
     strip /usr/local/bin/miner && \
     cd / && \
     rm -rf /src/bitcoinnova && \
-    apt-get remove -y build-essential python-dev gcc-4.9 g++-4.9 git cmake libboost1.58-all-dev && \
+    apt-get remove -y build-essential python-dev gcc-7 g++-7 git cmake libboost1.58-all-dev && \
     apt-get autoremove -y && \
     apt-get install -y  \
       libboost-system1.58.0 \
