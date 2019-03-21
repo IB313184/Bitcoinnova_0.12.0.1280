@@ -17,22 +17,13 @@ ENV BITCOINNOVA_BRANCH=${BITCOINNOVA_BRANCH}
 # install build dependencies
 # checkout the latest tag
 # build and install
-
-RUN add-apt-repository ppa:jonathonf/gcc-7.1 && \
-    apt-get update && \
-    apt-get install gcc-7 g++-7 -y
-
-# build cmake (ubuntu 14.04 comes with cmake 2.8, we want a 3.X)
-RUN apt-get install -y curl
-RUN curl -O https://cmake.org/files/v3.8/cmake-3.8.0.tar.gz \
-     && tar -xvf cmake-3.8.0.tar.gz
-RUN cd cmake-3.8.0 && ./bootstrap && make && make install
-
 RUN apt-get update && \
     apt-get install -y \
       build-essential \
       python-dev \
-      git \
+      gcc-4.9 \
+      g++-4.9 \
+      git cmake \
       libboost1.58-all-dev && \
     git clone https://github.com/IB313184/Bitcoinnova_0.12.0.1280.git /src/bitcoinnova && \
     cd /src/bitcoinnova && \
@@ -52,7 +43,7 @@ RUN apt-get update && \
     strip /usr/local/bin/miner && \
     cd / && \
     rm -rf /src/bitcoinnova && \
-    apt-get remove -y build-essential python-dev gcc-7 g++-7 git cmake libboost1.58-all-dev && \
+    apt-get remove -y build-essential python-dev gcc-4.9 g++-4.9 git cmake libboost1.58-all-dev && \
     apt-get autoremove -y && \
     apt-get install -y  \
       libboost-system1.58.0 \
