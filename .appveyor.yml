@@ -35,12 +35,12 @@ artifacts:
 deploy:
   - provider: GitHub
     auth_token:
-      secure: $GITHUB_API_KEY
+      secure: Et6vQSczqAYwxWaphlKbymjIB3d16tJIwEHXAjxcxDMBxF+HM4bNQEuBIlEzYfU8
     artifact: BitcoinNovaRelease
     draft: false
     prerelease: false
     on:
-      appveyor_repo_name: IB313184/Bitcoinnova_0.12.0.1280
+      appveyor_repo_name: ib313184/bitcoinnova_0.12.0.1280
       appveyor_repo_tag: true
 
   - provider: S3
@@ -54,4 +54,4 @@ deploy:
     folder: bitcoinnova
     artifact: BitcoinNovaRelease
     on:
-      appveyor_repo_name: BitcoinNova/bitcoinnova
+      appveyor_repo_name: ib313184/bitcoinnova_0.12.0.1280

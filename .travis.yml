@@ -154,7 +154,7 @@ deploy:
       - bitcoinnova-${TRAVIS_TAG}-${LABEL}.tar.gz
     skip_cleanup: true
     on:
-      repo: IB313184/Bitcoinnova_0.12.0.1280
+      repo: ib313184/bitcoinnova_0.12.0.1280
       tags: true
       condition: "$_DEPLOYABLE = true"
 
@@ -170,5 +170,5 @@ deploy:
     upload-dir: bitcoinnova
     local-dir: src/builds
     on:
-      repo: BitcoinNova/bitcoinnova
+      repo: ib313184/bitcoinnova_0.12.0.1280
       all_branches: true
