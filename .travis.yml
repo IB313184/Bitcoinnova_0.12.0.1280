@@ -136,14 +136,14 @@ before_deploy:
 - cd src
 - TARGETS="Bitcoinnovad miner zedwallet turtle-service zedwallet-beta cryptotest wallet-api"
 - ${STRIP} ${TARGETS}
-- rm -rf bitcoinnova-${TRAVIS_TAG} 
-- mkdir bitcoinnova-${TRAVIS_TAG}
-- cp ${TARGETS} bitcoinnova-${TRAVIS_TAG}/
-- cp ../../LICENSE bitcoinnova-${TRAVIS_TAG}/
-- tar cvfz bitcoinnova-${TRAVIS_TAG}-${LABEL}.tar.gz bitcoinnova-${TRAVIS_TAG}/
+- rm -rf bitcoinnova-12-${TRAVIS_TAG} 
+- mkdir bitcoinnova-12-${TRAVIS_TAG}
+- cp ${TARGETS} bitcoinnova-12-${TRAVIS_TAG}/
+- cp ../../LICENSE bitcoinnova-12-${TRAVIS_TAG}/
+- tar cvfz bitcoinnova-12-${TRAVIS_TAG}-${LABEL}.tar.gz bitcoinnova-12-${TRAVIS_TAG}/
 - rm -rf builds
 - mkdir builds
-- cp bitcoinnova-${TRAVIS_TAG}-${LABEL}.tar.gz builds
+- cp bitcoinnova-12-${TRAVIS_TAG}-${LABEL}.tar.gz builds
 - cd ..
 
 deploy:
