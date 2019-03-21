@@ -134,7 +134,7 @@ script:
 before_deploy:
 - if [[ "${TRAVIS_TAG}" == "" ]]; then export TRAVIS_TAG=${TRAVIS_COMMIT} ; fi
 - cd src
-- TARGETS="Bitcoinnovad miner zedwallet turtle-service zedwallet-beta cryptotest wallet-api"
+- TARGETS="Bitcoinnovad miner zedwallet Bitcoinnova-service zedwallet-beta cryptotest wallet-api"
 - ${STRIP} ${TARGETS}
 - rm -rf bitcoinnova-12-${TRAVIS_TAG} 
 - mkdir bitcoinnova-12-${TRAVIS_TAG}
