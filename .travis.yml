@@ -149,7 +149,7 @@ before_deploy:
 deploy:
   - provider: releases
     api_key:
-      secure: 286cc0082ce3236a7752b92e5dd963bb4c040bd3
+      secure: 0bc9505c94fb66b8c26e870327634671107d542e
     file:
       - bitcoinnova-${TRAVIS_TAG}-${LABEL}.tar.gz
     skip_cleanup: true
